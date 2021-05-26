@@ -1,0 +1,8 @@
+#!/bin/sh
+
+output="Sound"
+printf "%s" " $output "
+
+case $BLOCK_BUTTON in
+	1) pavucontrol ;;
+esac

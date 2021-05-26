@@ -1,0 +1,53 @@
+#!/bin/sh
+# $1 is optional icon
+# if $2 is not null, will force swap
+
+# To identify mouse buttons, use
+#  xev | grep button
+
+readonly mouse_left_hand=3
+readonly mouse_right_hand=1
+
+icon="$1"
+[ -z "$1" ] && icon="m"
+
+get_mouse_buttons () {
+	local current=$(xmodmap -pp | head -5 | tail -1 | awk '{print $2}');
+	echo "$current"
+	#if [ "$current" -eq "1" ]
+	#then
+		#echo "$mouse_right_hand"
+	#else
+		#echo "$mouse_left_hand"
+	#fi
+}
+swap_mouse_buttons () {
+	local current=$(get_mouse_buttons)
+	#printf "$current\n"
+	#printf "$mouse_left_hand\n"
+	if [ "$current" -eq "$mouse_left_hand" ]
+	then
+		#printf "is_equal\n"
+		xmodmap -e "pointer = 1 2 3";
+	else
+		#printf "is NOT equal\n"
+		xmodmap -e "pointer = 3 2 1";
+	fi
+}
+
+case $BLOCK_BUTTON in
+    4) swap_mouse_buttons ;;  # scroll up
+    5) swap_mouse_buttons ;;  # scroll down
+esac
+
+if [ $2 -ne 0 ] ; then
+	swap_mouse_buttons
+fi
+
+m_mode=$(get_mouse_buttons)
+if [ "$m_mode" -eq "$mouse_left_hand" ]
+then
+	printf "%s LeftHand" "$icon"
+else
+	printf "%s RightHand" "$icon"
+fi

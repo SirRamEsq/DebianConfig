@@ -1,0 +1,5 @@
+#!/bin/sh
+
+# Get last line of dropbox status
+output=$(dropbox status | awk 'NR==1;')
+printf "📩 %s" " $output "

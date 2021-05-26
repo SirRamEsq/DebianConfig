@@ -1,0 +1,10 @@
+#!/bin/sh
+
+output=$(date '+%Y %b %d (%a) %I:%M%p')
+printf "%s" " $output "
+
+case $BLOCK_BUTTON in
+	1) gsimplecal ;;
+	2) xdg-open https://calendar.google.com; wmctrl -a Firefox ;;
+	3) xdg-open https://calendar.google.com; wmctrl -a Firefox ;;
+esac

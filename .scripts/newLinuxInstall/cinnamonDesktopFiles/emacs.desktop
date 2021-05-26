@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Snap Emcas
+Comment=Emacs installed via Snapd
+Exec=/snap/bin/emacs
+Icon=/home/ryan/.local/share/applications/customIcons/emacs.png
+Type=Application
+Categories=Development;
+StartupNotify=true
+

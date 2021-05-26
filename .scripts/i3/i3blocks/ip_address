@@ -1,0 +1,5 @@
+#!/bin/sh
+
+icon=🌐
+commandOut=$(ip addr | grep 'state UP' | head -n1 | awk '{print $2}' | cut -f1  -d'/')
+printf "%s %s" "$icon" "$commandOut"
