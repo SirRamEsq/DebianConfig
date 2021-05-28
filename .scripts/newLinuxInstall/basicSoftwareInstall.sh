@@ -44,6 +44,4 @@ sudo apt install vlc
 sudo apt install audacity
 
 # Discord
-# sudo snap install discord
-# Install actual DOOM (gzdoom) via snapd
-# sudo snap install gzdoom
+sudo snap install discord
