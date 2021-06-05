@@ -5,7 +5,7 @@ cd ~
 
 # Basic software install
 sudo apt update
-sudo apt install git curl zsh sakura tmux neovim ranger xfonts-utils flameshot nmap fortune cowsay python3 python3-pip curl wget dunst i3blocks ncmpcpp compton dmenu feh gsimplecal unclutter filezilla
+sudo apt install git curl zsh sakura tmux neovim ranger xfonts-utils flameshot nmap fortune cowsay python3 python3-pip curl wget dunst i3blocks ncmpcpp compton dmenu feh gsimplecal unclutter filezilla unrar
 sudo pip3 install neovim
 sudo pip3 install pywal
 
