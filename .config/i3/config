@@ -17,6 +17,7 @@ gaps outer 15
 # Screensaver after 10 minutes
 exec --no-startup-id xset dpms 600
 exec --no-startup-id dropbox start
+exec --no-startup-id flameshot
 
  Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -52,7 +53,7 @@ exec --no-startup-id compton -b --config ~/.config/compton.conf
 # Unclutter makes the mouse invisible after a brief period
 exec --no-startup-id unclutter
 # xRandrSetup
-exec --no-startup-id ~/.scripts/xrandrSetup.sh
+exec --no-startup-id ~/xrandrSetup.sh
 # Starts dunst for notifications:
 exec --no-startup-id dunst
 # mpd startup
