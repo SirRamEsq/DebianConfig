@@ -35,6 +35,6 @@ cd build
 meson --prefix /usr/local
 sudo ninja install
 
-echo "Remember to set the xrandr setup scrip at ~/xrandrSetup.sh"
+echo "Remember to set the xrandr setup scrip at ~/.config/xrandrSetup.sh"
 echo "Should be something like xrandr --output HDMI-0 --auto --right-of DVI-D-0 "
 echo "invoke 'xrandr' to get display options"

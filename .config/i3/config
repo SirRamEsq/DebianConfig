@@ -53,9 +53,11 @@ exec --no-startup-id compton -b --config ~/.config/compton.conf
 # Unclutter makes the mouse invisible after a brief period
 exec --no-startup-id unclutter
 # xRandrSetup
-exec --no-startup-id ~/xrandrSetup.sh
+exec --no-startup-id ~/.config/xrandrSetup.sh
 # Starts dunst for notifications:
 exec --no-startup-id dunst
+# Get colors from PyWal
+exec --no-startup-id ~/.config/pywal-persist.sh
 # mpd startup
 # exec --no-startup-id mpd
 
