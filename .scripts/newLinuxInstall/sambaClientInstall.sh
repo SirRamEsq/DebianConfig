@@ -18,6 +18,6 @@ sudo cp ./.smbcredentials /root/.smbcredentials
 echo ""
 echo "##################################################################################"
 echo "Add the following mount command to /etc/fstab"
-echo "//192.168.0.20/share /media/samba_share cifs vers=3.0,credentials=/root/.smbcredentials,nofail"
+echo "//192.168.0.20/share /media/samba_share cifs vers=3.0,credentials=/root/.smbcredentials,nofail,file_mode=0777,dir_mode=0777"
 echo "##################################################################################"
 echo " Run 'sudo findmnt --verify' or 'sudo findmnt --verify --verbose' to check fstab validity"

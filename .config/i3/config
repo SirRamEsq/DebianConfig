@@ -14,6 +14,12 @@ set $term sakura
 gaps inner 15
 gaps outer 15
 
+# Only enable gaps on a workspace when there is at least one container
+smart_gaps on
+
+# Only enable outer gaps when there is exactly one container
+smart_gaps inverse_outer
+
 # Screensaver after 10 minutes
 exec --no-startup-id xset dpms 600
 exec --no-startup-id dropbox start
@@ -107,7 +113,7 @@ bindsym $mod+Return exec $term
 # For VIM
 # bindsym $mod+n exec $term -e zsh -ic "~/.scripts/newNote.sh"
 # For EMACS
-bindsym $mod+n exec ~/.scripts/newNoteEmacs.sh
+#bindsym $mod+n exec ~/.scripts/newNoteEmacs.sh
 
 # ranger
 bindsym $mod+r exec $term -e zsh -ic "ranger"
@@ -212,7 +218,7 @@ workspace 10 output $monitorSecondary
 bindsym $mod+F1 exec --no-startup-id /snap/bin/emacs
 bindsym $mod+F2 exec $term -e zsh -ic "ncmpcpp"
 bindsym $mod+F3 exec --no-startup-id brave-browser
-bindsym $mod+F12 exec --no-startup-id "godot ~/godot/3.1/projects/project-louie/project.godot"
+bindsym $mod+F12 exec --no-startup-id "godot ~/godot/projects/project-louie/project.godot"
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
