@@ -26,6 +26,8 @@ echo $monitorOneName
 if [ $monitorCount -eq 1 ]; then
 	rm ~/.config/xrandrSetup.sh
 	echo "xrandr --output $monitorOneName --auto" >> ~/.config/xrandrSetup.sh
+	rm ~/.config/i3/configFiles/monitors.conf
+	echo "set \$monitorPrimary $monitorOneName" >> ~/.config/i3/configFiles/monitors.conf
 fi
 if [ $monitorCount -eq 2 ]; then
 	echo "Choose second monitor in LEFT to RIGHT order"
@@ -39,6 +41,9 @@ if [ $monitorCount -eq 2 ]; then
 
 	rm ~/.config/xrandrSetup.sh
 	echo "xrandr --output $monitorOneName --auto --right-of $monitorTwoName" >> ~/.config/xrandrSetup.sh
+	rm ~/.config/i3/configFiles/monitors.conf
+	echo "set \$monitorPrimary $monitorOneName" >> ~/.config/i3/configFiles/monitors.conf
+	echo "set \$monitorSecondary $monitorTwoName" >> ~/.config/i3/configFiles/monitors.conf
 fi
 
 chmod +x ~/.config/xrandrSetup.sh
