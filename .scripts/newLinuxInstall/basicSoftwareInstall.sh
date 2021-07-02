@@ -8,6 +8,9 @@ sudo apt update
 sudo apt install git curl zsh sakura tmux neovim ranger xfonts-utils flameshot nmap fortune cowsay python3 python3-pip curl wget dunst i3blocks ncmpcpp compton dmenu feh gsimplecal unclutter filezilla unrar ncmpcpp pcmanfm scrot
 sudo pip3 install neovim
 sudo pip3 install pywal
+# Godot toolkit + Gdformat
+# https://github.com/scony/godot-gdscript-toolkit/
+sudo pip3 install gdtoolkit
 
 # Oh-My-Zsh
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
