@@ -6,6 +6,7 @@ cd ~
 # Basic software install
 sudo apt update
 sudo apt install git curl zsh sakura tmux neovim ranger xfonts-utils flameshot nmap fortune cowsay python3 python3-pip curl wget dunst i3blocks ncmpcpp compton dmenu feh gsimplecal unclutter filezilla unrar ncmpcpp pcmanfm scrot
+sudo apt install transmission
 sudo apt install libreoffice
 sudo pip3 install neovim
 sudo pip3 install pywal
