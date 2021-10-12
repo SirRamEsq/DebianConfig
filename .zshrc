@@ -111,3 +111,9 @@ export EDITOR='nvim'
 #Also added line in .xinitrc
 
 alias config='/usr/bin/git --git-dir=/home/ryan/.cfg-git/ --work-tree=/home/ryan'
+
+
+# RUBY ENVRIONMENT
+# Install Ruby Gems to ~/gems
+export GEM_HOME="$HOME/gems"
+export PATH="$HOME/gems/bin:$PATH"
